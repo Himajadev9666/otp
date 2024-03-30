@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP GENERATOR</title>
+    <style>
+        body{
+            background-image: url(https://img.freepik.com/free-vector/shiny-blue-background_1378-149.jpg?size=626&ext=jpg&ga=GA1.1.384582598.1706159276&semt=ais);
+            background-repeat: no-repeat;
+            background-size: 1500px;
+        }
+    </style>
+</head>
+<body>
+          
+    <script>
+        var A=document.createElement("div");
+        A.style.border="1px solid white";
+        A.style.height="400px";
+        A.style.width="600px";
+        A.style.marginLeft="300px"
+        A.style.marginTop="70px"
+        document.body.appendChild(A);
+
+        var R=document.createElement("h2")
+        R.innerText="OTP GENERATOR"
+        R.style.border="1px solid green"
+        R.style.height="40px"
+        R.style.width="400px"
+        R.style.marginLeft="65px"
+        R.style.textAlign="center"
+        R.style.margin="100px"
+        R.style.backgroundColor="lightyellow"
+        R.style.paddingTop="5px"
+        A.appendChild(R);
+
+        var R=document.createElement("p")
+        R.className="hima"
+        R.style.border="1px solid green"
+        R.style.height="20px"
+        R.style.width="200px"
+        R.style.marginLeft="195px"
+        R.style.textAlign="center"
+        R.style.backgroundColor="cyan"
+        R.style.paddingTop="5px"
+        A.appendChild(R);
+
+        var R=document.createElement("button")
+        R.className="hima1"
+        R.innerHTML="OTP"
+        R.style.marginLeft="280px"
+        R.style.backgroundColor="lightgreen"
+        
+        A.appendChild(R)
+        
+        document.querySelector(".hima1").addEventListener("click", generateOTP);
+
+        function generateOTP() {
+            var otp = Math.floor(Math.random() * 100000)
+            document.querySelector(".hima").innerText =  otp;
+        }
+    </script>
+</body>
+</html>
